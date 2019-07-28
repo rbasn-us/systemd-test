@@ -1,0 +1,14 @@
+# System.d service
+# systemd_daemon.service
+# Place in /etc/systemd/system/
+
+[Unit]
+Description=system.d test daemon
+
+[Service]
+Type=dbus
+User=root
+Group=root
+BusName=us.rbasn.systemd.test
+ExecStart=/home/joe/PycharmProjects/SystemDTest/venv/systemd-test/systemd_daemon.py start
+ExecStop=/home/joe/PycharmProjects/SystemDTest/venv/systemd-test/systemd_daemon.py stop

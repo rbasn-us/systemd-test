@@ -1,0 +1,16 @@
+# System.d service file
+# systemd_test.service
+# Place in /etc/systemd/system/
+
+[Unit]
+Description=Testing System.d Service
+
+[Service]
+Type=notify
+# RemainAfterExit=true
+ExecStart=/home/joe/PycharmProjects/SystemDTest/venv/systemd-test/systemd_test.py start
+ExecStop=/home/joe/PycharmProjects/SystemDTest/venv/systemd-test/systemd_test.py stop
+# Following commented lines for modifying log file locations via rsyslog:
+# StandardOutput=syslog
+# StandardError=syslog
+# SyslogIdentifier=systemd_test
